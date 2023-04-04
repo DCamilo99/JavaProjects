@@ -1,4 +1,4 @@
-//Programa que dice si un numero es Par o Impar
+//Programa que dice si un numero es Neutro o Par/Impar Positivo o Negativo 
 
 import java.util.Scanner;
 public class ParImpar {
@@ -8,13 +8,31 @@ public class ParImpar {
         System.out.println("Ingresa el numero: ");
         int n = leer.nextInt();
         
-        //Analizamos si es Par o Impar
-        if (n % 2 == 0){
-            //Si es divisible entre 2 es par
-            System.out.println("El numero es PAR");
-            //En caso de que no se cumpla la condicion es IMPAR
+        //
+        if (n != 0){
+            //Si es diferente a 0 analiza si es Positivo
+            if(n > 0){
+                //Ahora si es Par
+                if(n % 2 == 0){
+                    //Imprime
+                    System.out.println("El numero "+n+" es PAR POSITIVO");
+                }else{
+                    //De lo contrario es impar
+                    System.out.println("El numero "+n+" es IMPAR POSITIVO");
+                }
+            }else{
+                //Si es menor a 0 es negativo
+                if(n % 2 == 0){
+                    //Si es par
+                    System.out.println("El numero "+n+" es PAR NEGATIVO");
+                }else{
+                    //De lo contrario es impar
+                    System.out.println("El numero "+n+" es IMPAR NEGATIVO");
+                }
+            }
         }else{
-            System.out.println("El numero es IMPAR");
+            //Si es 0 el numero es neutro
+            System.out.println("El numero es NEUTRO");
         }      
     }   
 }
